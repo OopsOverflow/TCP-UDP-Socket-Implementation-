@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     {
         int bind(sockfd, &servaddr, sizeof(servaddr));
         int recv(int sockfd, char *buf, int len, int flags);
-	    n = recvfrom(sockfd, (char *)buffer, MAXLINE, MSG_WAITALL, ( struct sockaddr *) &cliaddr, &len); 
+	n = recvfrom(sockfd, (char *)buffer, MAXLINE, MSG_WAITALL, ( struct sockaddr *) &cliaddr, &len); 
     }
 return 0;
 }
