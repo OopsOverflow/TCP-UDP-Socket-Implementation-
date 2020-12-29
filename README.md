@@ -1,2 +1,2 @@
 # TCP-UDP-Socket-Implementation-
-J'ai fais les version tcp et udp pour windows mais si tu veux tu peux faire celles pour linux
+J'ai fait les version tcp et udp pour windows mais si tu veux tu peux faire celles pour linux
