@@ -14,17 +14,17 @@
 
 int main(int argc, char *argv[])
 {
-    WSADATA WSAData; // variable initialisée par WSAStartup
-    WSAStartup(MAKEWORD(2,0), &WSAData); // indique la version utilisée, ici 2.0
+    WSADATA WSAData; // variable initialisÃ©e par WSAStartup
+    WSAStartup(MAKEWORD(2,0), &WSAData); // indique la version utilisÃ©e, ici 2.0
 
     /*
     * Variables du serveur
     *
-    * Déclarer ici les variables suivantes :
+    * DÃ©clarer ici les variables suivantes :
     * - sockfd le descripteur de socket
-    * - structure d’adresse locale du serveur
-    * - structure d’adresse du client
-    * - taille de l’adresse du client
+    * - structure dâ€™adresse locale du serveur
+    * - structure dâ€™adresse du client
+    * - taille de lâ€™adresse du client
     */
 
     SOCKET sockfd;
@@ -37,11 +37,11 @@ int main(int argc, char *argv[])
     * Code du serveur
     *
     * - Ouvrir le socket du serveur
-    * - Remplir la structure d’adresse locale du serveur :
-    * - la famille d’adresse
-    * - l’adresse IP
+    * - Remplir la structure dâ€™adresse locale du serveur :
+    * - la famille dâ€™adresse
+    * - lâ€™adresse IP
     * - le port
-    * - Spécifier l’adresse locale du socket du serveur
+    * - SpÃ©cifier lâ€™adresse locale du socket du serveur
     */
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
     char* buffer[SIZE];
 
     /*
-    * Boucle générale du serveur (infinie)
+    * Boucle gÃ©nÃ©rale du serveur (infinie)
     */
 
     if(listen(sockfd, SOMAXCONN) == SOCKET_ERROR)
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
     while (1)
     {
         /*
-        * Code de l’éintrieur de la boucle
+        * Code de lâ€™Ã©intrieur de la boucle
         */
         client_socket = accept(sockfd, NULL, NULL);
         if(client_socket == INVALID_SOCKET)
@@ -121,6 +121,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    WSACleanup(); // termine l’utilisation
+    WSACleanup(); // termine lâ€™utilisation
     return 0;
 }

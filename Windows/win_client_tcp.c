@@ -13,19 +13,19 @@
 
 int main (int argc, char *argv[])
 {
-    WSADATA WSAData; // variable initialisée par WSAStartup
-    WSAStartup(MAKEWORD(2,0), &WSAData); // indique la version utilisée, ici 2.0
+    WSADATA WSAData; // variable initialisÃ©e par WSAStartup
+    WSAStartup(MAKEWORD(2,0), &WSAData); // indique la version utilisÃ©e, ici 2.0
 
     /*
     * Variables du client
     *
-    * Déclarer ici les variables suivantes :
+    * DÃ©clarer ici les variables suivantes :
     * - sockfd le descripteur de socket
-    * - structure d’adresse du serveur
+    * - structure dâ€™adresse du serveur
     * - pointeur vers la structure descriptive de machine (hostent)
-    * - zone de mémoire destinée à accueillir la chaîne
-    * entrée au clavier
-    * - taille de la chaîne à envoyer
+    * - zone de mÃ©moire destinÃ©e Ã  accueillir la chaÃ®ne
+    * entrÃ©e au clavier
+    * - taille de la chaÃ®ne Ã  envoyer
     */
 
     SOCKET sockfd;
@@ -39,11 +39,11 @@ int main (int argc, char *argv[])
     * Code du client
     *
     * - Ouvrir le socket du client
-    * - Récupérer l’adresse IP du serveur à partir de son nom
-    * donné en ligne de commande
-    * - Remplir la structure d’adresse du serveur
-    * - Lire une ligne de l’entrée standard
-    * - Envoyer la chaîne lue au serveur
+    * - RÃ©cupÃ©rer lâ€™adresse IP du serveur Ã  partir de son nom
+    * donnÃ© en ligne de commande
+    * - Remplir la structure dâ€™adresse du serveur
+    * - Lire une ligne de lâ€™entrÃ©e standard
+    * - Envoyer la chaÃ®ne lue au serveur
     */
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -103,7 +103,7 @@ int main (int argc, char *argv[])
     }
     printf("Socket fermee avec succes !\n\n");
 
-    WSACleanup(); // termine l’utilisation
+    WSACleanup(); // termine lâ€™utilisation
 
     return 0;
 }
