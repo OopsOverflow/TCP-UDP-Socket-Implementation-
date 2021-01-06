@@ -48,7 +48,7 @@ int main()
         
         // Fermeture du socket en cas d'erreur
         close(sockFD);
-        return -2;
+        return -1;
     }
 
 
@@ -59,7 +59,7 @@ int main()
 
         // Fermeture du socket en cas d'erreur
         close(sockFD);
-        return -3;
+        return -1;
     }
 
     //Info client
